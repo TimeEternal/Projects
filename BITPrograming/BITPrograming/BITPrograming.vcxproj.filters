@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="How to Type.cpp">
+    <ClCompile Include="hdu2512 一卡通大冒险.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

@@ -19,7 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="How to Type.cpp" />
+    <ClCompile Include="hdu2512 一卡通大冒险.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2286466A-7F5B-457D-975E-9F9F984E4DE5}</ProjectGuid>
