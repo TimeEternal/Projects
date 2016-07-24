@@ -18,9 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Anti Brute Force Lock.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{2286466A-7F5B-457D-975E-9F9F984E4DE5}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
