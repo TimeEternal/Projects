@@ -1,54 +1,5 @@
-/*http://blog.csdn.net/say_c_box/article/details/52003545*/
-#include <cmath>
-#include <cstring>
-#include <cstdio>
-#include <vector>
-#include <string>
-#include <algorithm>
-#include <string>
-#include <set>
-
-
-using namespace std;
-
-#define MAXN 110
-#define LEN 1000000
-#define INF 1e9+7
-#define MODE 1000000
-typedef long long ll;
-
-
-int n;
-int a[MAXN];
-int f[MAXN][3];
-
-int main()
-{
-	scanf("%d", &n);
-	for (int i = 1; i <= n; i++)
-		scanf("%d", a + i);
-	for (int i = 0; i<4; i++)
-		f[0][i] = 0;
-	for (int i = 1; i <= n; i++)
-	{
-		f[i][0] = min(f[i - 1][0], min(f[i - 1][1], f[i - 1][2])) + 1;
-		if (a[i] == 1 || a[i] == 3)
-			f[i][1] = min(f[i - 1][0], f[i - 1][2]);
-		else
-			f[i][1] = INF;
-		if (a[i] == 2 || a[i] == 3)
-			f[i][2] = min(f[i - 1][0], f[i - 1][1]);
-		else
-			f[i][2] = INF;
-		if (a[i] == 0)
-		{
-			f[i][1] = INF;
-			f[i][2] = INF;
-		}
-	}
-	printf("%d\n", min(f[n][0], min(f[n][1], f[n][2])));
-}
-/*http://blog.csdn.net/nare123/article/details/51966794*/  //大神代码看不懂啊
+/*http://blog.csdn.net/say_c_box/article/details/52003545 */
+/*http://blog.csdn.net/nare123/article/details/51966794 */  //大神代码看不懂啊
 /*
 观察所给数字的二进制为00,01,10,11.其中的1恰好为对应的天数能干的事情。
 假设k[i]为第k天应该干的事情
@@ -59,3 +10,33 @@ k[R+1]=k[L-1]^k[L]^...^k[R](^为异或运算)
 再考虑a[]中没有3的情况那么,k[i+1]=a[i+1]^k[i]; 若k[i+1]==3说明其中一定存在10,01那么k[i+1]=k[i]&a[i+1];
 若k[i]==0 则说明第i天休息；
 */
+#include<iostream>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+const int INF = 0x3f3f3f3f;
+int mymin(int a, int b, int c) {
+	return min(a, min(b, c));
+}
+int main()
+{
+	int s[107], n;
+	int dp[107][3];
+	memset(dp, INF, sizeof(dp));
+	dp[0][1] = dp[0][0] = dp[0][2] = 0;
+	cin >> n;
+	for (int i = 1; i <= n; i++) cin >> s[i];
+	for (int i = 1; i <= n; i++) {
+		dp[i][0] = mymin(dp[i - 1][0], dp[i - 1][1], dp[i - 1][2]) + 1;
+		if (s[i] == 1 || s[i] == 3) {
+			dp[i][2] = min(dp[i - 1][0], dp[i - 1][1]);
+		}
+		if (s[i] == 2 || s[i] == 3) {
+			dp[i][1] = min(dp[i - 1][0], dp[i - 1][2]);
+		}
+		// 原本还有s[i]==0  dp[i][1]=dp[i][2]=INF 代表无法做这件事 这个状态无法转移到下个状态 起初全初始化为INF了 省略这个步骤
+	}
+	int ans = mymin(dp[n][0], dp[n][1], dp[n][2]);
+	cout << ans << endl;
+	return 0;
+}

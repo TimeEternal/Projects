@@ -5,33 +5,31 @@ nÕÅ¿¨·Ö×éÒ»¹²Ö»ÓĞnÖÖÇé¿ö£¬·Ö±ğÊÇ·ÖÒ»×é£¬Á½×é£¬Èı×é¡£¡£¡£n×é¡£½«iÕÅ¿¨·Ö³Éj×é¿ÉÒÔÓ
 ×´Ì¬×ªÒÆ·½³Ì£ºmark[i][j]=mark[i-1][j-1]+mark[i-1][j]*j¡£
 */
 #include<iostream>
-#include<cmath>
-#include<cstdio>
+#include<algorithm>
 #include<cstring>
-#define LL long long
-#define eps 1e-7
-#define MOD 1000
 using namespace std;
-int stir2[2005][2005];
-int bell[2005];
-int main() {
-	memset(stir2, 0x00000001, sizeof(stir2));
+
+int mark[2007][2007], bell[2007];//Ë¹ÌØÁéÊı ±´¶ûÊı
+int main()
+{
+	memset(mark, 0, sizeof(mark));
 	for (int i = 1; i <= 2000; i++) {
-		stir2[i][0] = 0;
-		stir2[i][i] = 1;
-		for (int j = 1; j<i; j++)
-			stir2[i][j] = (stir2[i - 1][j - 1] + j*stir2[i - 1][j]) % MOD;
+		mark[i][i] = 1;
+		for (int j = 1; j < i; j++) {
+			mark[i][j] = (mark[i - 1][j - 1] + mark[i - 1][j] * j) % 1000;
+		}
 	}
 	for (int i = 1; i <= 2000; i++) {
 		bell[i] = 0;
-		for (int j = 0; j <= i; j++)
-			bell[i] = (bell[i] + stir2[i][j]) % MOD;
+		for (int j = 1; j <= i; j++)
+			bell[i] = (bell[i] + mark[i][j]) % 1000;
 	}
-	int n, t;
-	cin >> t;
-	while (t--) {
-		cin >> n;
-		cout << bell[n] << endl;
+	int n;
+	cin >> n;
+	while (n--) {
+		int x;
+		cin >> x;
+		cout << bell[x] << endl;
 	}
 	return 0;
 }
