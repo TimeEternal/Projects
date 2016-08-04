@@ -18,9 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="1001 Exponentiation.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{9565265F-7230-429F-83D0-4435276017FB}</ProjectGuid>
     <RootNamespace>POJ</RootNamespace>
