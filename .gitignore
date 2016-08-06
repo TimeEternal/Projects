@@ -1,5 +1,11 @@
 bin
+*.tlog
 *.suo
 *.obj
 *.ilk
 *.pdb
+*.db
+*.enc
+*.log
+
+
