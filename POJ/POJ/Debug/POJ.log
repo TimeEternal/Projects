@@ -1,3 +1,5 @@
 ﻿  3468 A Simple Problem with Integers.cpp
+d:\我的文档\visual studio 2015\projects\poj\poj\3468 a simple problem with integers.cpp(84): warning C4101: “k”: 未引用的局部变量
+d:\我的文档\visual studio 2015\projects\poj\poj\3468 a simple problem with integers.cpp(84): warning C4101: “j”: 未引用的局部变量
   POJ.vcxproj -> D:\我的文档\Visual Studio 2015\Projects\POJ\Debug\POJ.exe
   POJ.vcxproj -> D:\我的文档\Visual Studio 2015\Projects\POJ\Debug\POJ.pdb (Partial PDB)
