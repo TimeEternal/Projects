@@ -1,0 +1,13 @@
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\bin\Debug\实验1.exe.config
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\bin\Debug\实验1.exe
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\bin\Debug\实验1.pdb
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.csprojResolveAssemblyReference.cache
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.Form1.resources
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.Properties.Resources.resources
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.csproj.GenerateResource.Cache
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.exe
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.pdb
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.Form2.resources
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.Form3.resources
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.Form4.resources
+d:\我的文档\visual studio 2015\Projects\实验1\实验1\obj\Debug\实验1.Form5.resources
